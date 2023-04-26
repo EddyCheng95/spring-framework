@@ -16,19 +16,13 @@
 
 package org.springframework.util;
 
+import org.springframework.lang.Nullable;
+
 import java.lang.reflect.Array;
 import java.net.URI;
 import java.net.URL;
 import java.time.temporal.Temporal;
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.Date;
-import java.util.Locale;
-import java.util.Map;
-import java.util.Optional;
-import java.util.StringJoiner;
-
-import org.springframework.lang.Nullable;
+import java.util.*;
 
 /**
  * Miscellaneous object utility methods.
@@ -591,7 +585,7 @@ public abstract class ObjectUtils {
 		if (obj == null) {
 			return EMPTY_STRING;
 		}
-		return obj.getClass().getName() + "@" + getIdentityHexString(obj);
+ 		return obj.getClass().getName() + "@" + getIdentityHexString(obj);
 	}
 
 	/**
